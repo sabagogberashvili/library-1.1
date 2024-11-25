@@ -1,0 +1,7 @@
+<h1>{{ book.title }}</h1>
+<p>{{ book.description }}</p>
+<p>Author: {{ book.author.name }}</p>
+<p>Rating: {{ book.rating }}</p>
+<p>Categories: {{ book.category.all|join:", " }}</p>
+<a href="{% url 'update_book' book.id %}">Edit</a> | 
+<a href="{% url 'delete_book' book.id %}">Delete</a>

@@ -1,0 +1,7 @@
+<h1>Books with Rating Above 6</h1>
+<ul>
+    {% for book in books %}
+        <li>{{ book.title }} - <a href="{% url 'detail_book' book.id %}">Details</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'create_book' %}">Add a New Book</a>
